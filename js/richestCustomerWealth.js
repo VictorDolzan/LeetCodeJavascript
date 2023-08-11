@@ -1,4 +1,4 @@
-
+import initFindMax from "./modules/findMax.js";
 var maximumWealth = function(accounts) {
     let arrayMaximumWealth = [];
     accounts.forEach((cliente) => {
@@ -7,18 +7,9 @@ var maximumWealth = function(accounts) {
             soma += account;
         })
         arrayMaximumWealth.push(soma);
-    })
-    function findMax(arr){
-        let max = arr[0];
-        for (let i = 1; i < arr.length; i++){
-            if (arr[i] > max){
-                max = arr[i]
-            }
-        }
-        return max;
-    }
+    });
 
-    return findMax(arrayMaximumWealth);
+    return initFindMax(arrayMaximumWealth);
 };
 
 let result = maximumWealth([[1,2,3],[3,2,1]]);
